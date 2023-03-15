@@ -4,7 +4,7 @@ const base = require("./base.webpack.js");
 module.exports = {
   ...base,
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: path.join(__dirname, "../build"),
     publicPath: "/olyalass-JSFE2023Q1/shelter/build/",
   },

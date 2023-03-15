@@ -1,9 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  watch: true,
   mode: "development",
   devtool: "inline-source-map",
   entry: {
@@ -18,11 +18,6 @@ module.exports = {
   resolve: {
     extensions: [".js"],
   },
-  devServer: {
-    port: 8000,
-    historyApiFallback: true,
-    hot: true,
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "../src/pages/main", "index.html"),
@@ -35,6 +30,9 @@ module.exports = {
       chunks: ["pets"],
     }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [path.join(__dirname, "../assets")],
+    }),
   ],
   module: {
     rules: [
