@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  width: 443px;
+  justify-content: space-between;
+
+  &__link {
+    text-decoration: none;
+    font-family: "Arial";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+
+    &_light {
+      color: #545454;
+
+      &_active {
+        color: #292929;
+      }
+
+      &:hover {
+        color: #292929;
+      }
+    }
+
+    &_dark {
+      color: #cdcdcd;
+
+      &_active {
+        color: #fafafa;
+      }
+
+      &:hover {
+        color: #fafafa;
+      }
+    }
+
+    &_active {
+      border-bottom: 3px solid #f1cdb3;
+    }
+
+    &:active {
+      border-bottom: 3px solid #f1cdb3;
+    }
+  }
+}

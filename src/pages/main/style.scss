@@ -1,1 +1,23 @@
+body {
+  margin: 0;
+}
 
+.button {
+  padding: 13px 43px;
+  border-radius: 100px;
+
+  border-style: none;
+  border: 2px solid #f1cdb3;
+
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: #292929;
+  letter-spacing: 0.9px;
+
+  &_filled {
+    background-color: #f1cdb3;
+  }
+}

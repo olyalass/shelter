@@ -8,7 +8,7 @@ module.exports = {
   devtool: "inline-source-map",
   entry: {
     main: [path.join(__dirname, "../src/pages/main/", "main.js")],
-    donate: [path.join(__dirname, "../src/pages/pets/", "pets.js")],
+    pets: [path.join(__dirname, "../src/pages/pets/", "pets.js")],
   },
   output: {
     filename: "[name].js",
@@ -23,15 +23,17 @@ module.exports = {
       template: path.join(__dirname, "../src/pages/main", "index.html"),
       filename: "index.html",
       chunks: ["main"],
+      favicon: "./assets/icons/favicon.ico",
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "../src/pages/pets", "index.html"),
       filename: "pets.html",
       chunks: ["pets"],
+      favicon: "./assets/icons/favicon.ico",
     }),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
-      patterns: [path.join(__dirname, "../assets")],
+      patterns: [path.join(__dirname, "../assets/icons")],
     }),
   ],
   module: {
@@ -43,6 +45,20 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: path.join("images", "[name].[ext]"),
+        },
+      },
+      {
+        test: /\.svg$/,
+        type: "asset/resource",
+        generator: {
+          filename: path.join("icons", "[name].[ext]"),
+        },
       },
     ],
   },
