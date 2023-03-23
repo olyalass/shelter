@@ -4,5 +4,6 @@ import { Footer } from "../../shared_components/footer";
 
 const body = document.querySelector("body");
 const header = new Header(false, "About");
+const about = new About();
 const footer = new Footer();
-body.append(header.item, footer.item);
+body.append(header.item, about.item, footer.item);

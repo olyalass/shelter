@@ -1,0 +1,49 @@
+@import "../../../../mixins.scss";
+
+.about {
+  background-color: #ffffff;
+  padding: 80px 0 100px;
+
+  &__container {
+    @include space-between-flex();
+    margin: auto;
+    width: 850px;
+    align-items: center;
+  }
+
+  &__img {
+    background-image: url("../../../../../assets/images/about-pets.png");
+    @include no-repeat-background();
+    width: 300px;
+    height: 408px;
+  }
+
+  &__block {
+    @include space-between-flex();
+    flex-direction: column;
+    height: 380px;
+  }
+
+  &__title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #545454;
+    margin: 0;
+    max-width: 370px;
+    letter-spacing: 2px;
+  }
+
+  &__text {
+    max-width: 430px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4c4c4c;
+    margin: 0;
+  }
+}
