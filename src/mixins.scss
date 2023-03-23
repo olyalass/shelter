@@ -1,0 +1,10 @@
+@mixin space-between-flex() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin no-repeat-background() {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}

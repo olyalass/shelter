@@ -1,0 +1,84 @@
+@import "../../mixins.scss";
+
+.footer {
+  background-image: url("../../../assets/images/gradient-background.jpg");
+  @include no-repeat-background();
+
+  &__container {
+    @include space-between-flex();
+    width: 1200px;
+    margin: auto;
+    align-items: center;
+  }
+
+  &__wrap {
+    @include space-between-flex();
+    width: 740px;
+  }
+
+  &__img {
+    background-image: url("../../../assets/images/footer-puppy.png");
+    @include no-repeat-background();
+    background-position: center bottom;
+    width: 300px;
+    height: 350px;
+  }
+
+  &__block {
+    @include space-between-flex();
+    flex-direction: column;
+    height: 238px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #ffffff;
+    width: 278px;
+    letter-spacing: 1.9px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 4px;
+
+    &__text {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      text-decoration: none;
+      color: #f1cdb3;
+      max-width: 260px;
+      letter-spacing: 1.1px;
+    }
+  }
+
+  &__email {
+    background-image: url("../../../assets/icons/mail.svg");
+    @include no-repeat-background();
+    width: 40px;
+    height: 32px;
+  }
+
+  &__phone {
+    background-image: url("../../../assets/icons/phone.svg");
+    @include no-repeat-background();
+    width: 40px;
+    height: 32px;
+  }
+
+  &__loc {
+    background-image: url("../../../assets/icons/pin.svg");
+    @include no-repeat-background();
+    width: 22px;
+    height: 32px;
+  }
+}

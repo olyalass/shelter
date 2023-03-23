@@ -1,7 +1,8 @@
+@import "../../mixins.scss";
+
 .nav {
-  display: flex;
+  @include space-between-flex();
   width: 443px;
-  justify-content: space-between;
 
   &__link {
     text-decoration: none;
