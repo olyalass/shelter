@@ -1,0 +1,28 @@
+@import "../../../../mixins.scss";
+
+.friends {
+  background-color: #f6f6f6;
+  padding: 80px 0 100px;
+
+  &__container {
+    @include space-between-flex();
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
+    height: 697px;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #545454;
+    width: 400px;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../../../../mixins.scss";
+
+.slider {
+  &__container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: "left block right";
+    align-items: center;
+
+    width: 1200px;
+    margin: auto;
+  }
+
+  &__arrow {
+    width: 14px;
+    height: 6px;
+    padding: 21px 17px;
+    border: 2px solid #f1cdb3;
+    border-radius: 100px;
+
+    &_left {
+      grid-area: left;
+    }
+
+    &_right {
+      grid-area: right;
+    }
+  }
+
+  &__cards {
+    @include space-between-flex();
+    grid-area: block;
+    width: 990px;
+  }
+}
