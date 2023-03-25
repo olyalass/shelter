@@ -33,7 +33,14 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
-      patterns: [path.join(__dirname, "../assets/icons/favicon.ico")],
+      patterns: [
+        path.join(__dirname, "../assets/icons/favicon.ico"),
+        {
+          from: "pets-*.jpg",
+          to: "images",
+          context: "assets/images/",
+        },
+      ],
     }),
   ],
   module: {
