@@ -1,0 +1,60 @@
+@import "../../../../mixins.scss";
+
+.help {
+  @include space-between-flex();
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 100px;
+  background-color: #ffffff;
+
+  &__title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #545454;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0 0 60px;
+  }
+
+  &__mesh {
+    @include space-between-flex();
+    flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 55px;
+    width: 1026px;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__item {
+    @include space-between-flex();
+    flex-direction: column;
+    align-items: center;
+    height: 113px;
+
+    &:nth-last-child(4) {
+      padding-left: 84px;
+    }
+
+    &:last-child {
+      padding-right: 84px;
+    }
+  }
+
+  &__name {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    color: #545454;
+    letter-spacing: 1.1px;
+    margin: 0;
+  }
+}

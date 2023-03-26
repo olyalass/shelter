@@ -40,6 +40,11 @@ module.exports = {
           to: "images",
           context: "assets/images/",
         },
+        {
+          from: "help-*.svg",
+          to: "icons",
+          context: "assets/icons/",
+        },
       ],
     }),
   ],
