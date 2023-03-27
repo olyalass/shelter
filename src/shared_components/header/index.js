@@ -12,6 +12,9 @@ export class Header {
 
     const container = document.createElement("div");
     container.classList.add("header__container");
+    isLight
+      ? container.classList.add("header__container", "header__container_light")
+      : container.classList.add("header__container");
     const logo = document.createElement("div");
     logo.classList.add("logo");
     const logoTitle = document.createElement("h1");

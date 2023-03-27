@@ -9,6 +9,22 @@
   width: 270px;
   height: 405px;
   padding-bottom: 30px;
+  transition: box-shadow 0.6s;
+
+  &:hover {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+
+    & .button {
+      background-color: #fddcc4;
+      border-color: #fddcc4;
+
+      &:active {
+        background-color: #f1cdb3;
+        border-color: #f1cdb3;
+      }
+    }
+  }
 
   &__img {
     width: 270px;

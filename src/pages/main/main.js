@@ -1,5 +1,6 @@
+import "../../style.scss";
+
 import { Header } from "../../shared_components/header";
-import "./style.scss";
 import { Footer } from "../../shared_components/footer";
 import { About } from "./components/about";
 import { Friends } from "./components/friends";
