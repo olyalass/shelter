@@ -7,7 +7,7 @@ export class Friends {
   constructor() {
     this.item = document.createElement("div");
     this.item.classList.add("friends");
-    this.item.setAttribute("id", "#friends");
+    this.item.setAttribute("id", "friends");
     const container = document.createElement("div");
     container.classList.add("friends__container");
     this.item.appendChild(container);

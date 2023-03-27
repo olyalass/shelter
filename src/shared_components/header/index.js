@@ -51,7 +51,7 @@ export class Header {
       notOnlyText.classList.add("not-only__text");
       notOnlyText.textContent =
         "We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!";
-      const notOnlyButton = document.createElement("button");
+      const notOnlyButton = document.createElement("a");
       notOnlyButton.textContent = "Make a friend";
       notOnlyButton.setAttribute("href", "#friends");
       notOnlyButton.classList.add("button", "button_filled");
