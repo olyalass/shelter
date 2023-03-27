@@ -41,8 +41,9 @@ export class Donation {
       "src",
       require("../../../../../assets/icons/credit-card.svg")
     );
-    const donCardNumber = document.createElement("p");
+    const donCardNumber = document.createElement("a");
     donCardNumber.classList.add("donation__card__number");
+    donCardNumber.setAttribute("href", "#");
     donCardNumber.textContent = "8380 2880 8028 8791 7435";
     donCard.append(donCardImg, donCardNumber);
   }

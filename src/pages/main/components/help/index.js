@@ -6,6 +6,7 @@ export class Help {
   constructor() {
     this.container = document.createElement("div");
     this.container.classList.add("help");
+    this.container.setAttribute("id", "help");
 
     const helpTitle = document.createElement("h3");
     helpTitle.classList.add("help__title");

@@ -15,8 +15,14 @@ export class Header {
     isLight
       ? container.classList.add("header__container", "header__container_light")
       : container.classList.add("header__container");
-    const logo = document.createElement("div");
+    const logo = document.createElement("a");
     logo.classList.add("logo");
+    activePage === "About"
+      ? logo.setAttribute("href", "#")
+      : logo.setAttribute(
+          "href",
+          "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/index.html"
+        );
     const logoTitle = document.createElement("h1");
     isLight
       ? logoTitle.classList.add("logo__title", "logo__title_light")
@@ -47,6 +53,7 @@ export class Header {
         "We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!";
       const notOnlyButton = document.createElement("button");
       notOnlyButton.textContent = "Make a friend";
+      notOnlyButton.setAttribute("href", "#friends");
       notOnlyButton.classList.add("button", "button_filled");
       notOnlyContainer.append(notOnlyTitle, notOnlyText, notOnlyButton);
       const notOnlyImg = document.createElement("div");

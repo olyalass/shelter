@@ -7,6 +7,7 @@ export class Friends {
   constructor() {
     this.item = document.createElement("div");
     this.item.classList.add("friends");
+    this.item.setAttribute("id", "#friends");
     const container = document.createElement("div");
     container.classList.add("friends__container");
     this.item.appendChild(container);
@@ -18,6 +19,10 @@ export class Friends {
     const friendsButton = document.createElement("button");
     friendsButton.classList.add("button", "button_filled");
     friendsButton.textContent = "Get to know the rest";
+    friendsButton.setAttribute(
+      "href",
+      "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/pets.html"
+    );
     container.append(friendsTitle, friendsContainer.item, friendsButton);
   }
 }

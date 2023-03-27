@@ -6,7 +6,7 @@ export class Nav {
   constructor(isLight, activePage) {
     this.container = document.createElement("nav");
     this.container.classList.add("nav");
-    let linkAbout, linkPets;
+    let linkAbout, linkPets, linkHelp;
 
     if (activePage === "About") {
       linkAbout = this.createLink("About the shelter", "#", isLight, true);
@@ -15,6 +15,7 @@ export class Nav {
         "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/pets.html",
         isLight
       );
+      linkHelp = this.createLink("Help the shelter", "#help", isLight);
     } else {
       linkAbout = this.createLink(
         "About the shelter",
@@ -22,8 +23,13 @@ export class Nav {
         isLight
       );
       linkPets = this.createLink("Our pets", "#", isLight, true);
+      linkHelp = this.createLink(
+        "Help the shelter",
+        "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/index.html#help",
+        isLight
+      );
     }
-    const linkHelp = this.createLink("Help the shelter", "#help", isLight);
+
     const linkContacts = this.createLink("Contacts", "#footer", isLight);
 
     this.container.append(linkAbout, linkPets, linkHelp, linkContacts);

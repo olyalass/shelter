@@ -6,6 +6,7 @@ export class Footer {
   constructor() {
     this.item = document.createElement("footer");
     this.item.classList.add("footer");
+    this.item.setAttribute("id", "footer");
 
     const container = document.createElement("div");
     container.classList.add("footer__container");
@@ -58,6 +59,7 @@ export class Footer {
     const locFirstLink = document.createElement("a");
     locFirstLink.classList.add("footer__contact__text");
     locFirstLink.setAttribute("href", "https://goo.gl/maps/8kGqPZ8Bd8vAznAM8");
+    locFirstLink.setAttribute("target", "_blank");
     locFirstLink.textContent =
       "1 Central Street, Boston (entrance from the store)";
     locFirst.append(locFirstImg, locFirstLink);
@@ -68,6 +70,7 @@ export class Footer {
     const locSecondLink = document.createElement("a");
     locSecondLink.textContent = "18 South Park, London";
     locSecondLink.classList.add("footer__contact__text");
+    locSecondLink.setAttribute("target", "_blank");
     locSecondLink.setAttribute("href", "https://goo.gl/maps/fXCgJvgwJZkA12wB8");
     locSecond.append(locSecondImg, locSecondLink);
 

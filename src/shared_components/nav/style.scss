@@ -10,6 +10,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+    transition: all 0.3s;
 
     &_light {
       color: #545454;
@@ -37,6 +38,7 @@
 
     &_active {
       border-bottom: 3px solid #f1cdb3;
+      cursor: default;
     }
 
     &:active {
