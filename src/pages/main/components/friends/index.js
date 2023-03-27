@@ -16,7 +16,7 @@ export class Friends {
     friendsTitle.classList.add("friends__title");
     friendsTitle.innerHTML = "Our friends who <br>are looking for a house";
     const friendsContainer = new Slider();
-    const friendsButton = document.createElement("button");
+    const friendsButton = document.createElement("a");
     friendsButton.classList.add("button", "button_filled");
     friendsButton.textContent = "Get to know the rest";
     friendsButton.setAttribute(
