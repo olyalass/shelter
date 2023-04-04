@@ -46,3 +46,48 @@
     width: 990px;
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .slider {
+    &__container {
+      width: 970px;
+    }
+
+    &__cards {
+      width: 830px;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .slider {
+    &__container {
+      width: 708px;
+    }
+
+    &__cards {
+      width: 580px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    &__container {
+      grid-template-areas:
+        "block block"
+        "left right";
+      justify-content: center;
+      width: 270px;
+    }
+
+    &__arrow {
+      justify-self: center;
+    }
+
+    &__cards {
+      width: 270px;
+      padding-bottom: 20px;
+    }
+  }
+}

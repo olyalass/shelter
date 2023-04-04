@@ -16,7 +16,7 @@
     max-width: 1200px;
     align-items: center;
     margin: auto;
-    padding: 60px 0;
+    padding: 30px 0 90px;
 
     &_light {
       padding: 30px 0;
@@ -108,5 +108,82 @@
     width: 698px;
     height: 728px;
     align-self: baseline;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    &_dark {
+      background-size: 100% 100%;
+    }
+
+    &__container {
+      width: 92.2vw;
+      padding-bottom: 60px;
+
+      &_light {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .not-only {
+    max-width: 708px;
+    height: 1015px;
+    flex-direction: column;
+
+    &__container {
+      margin: 0 auto;
+
+      & .button {
+        align-self: center;
+      }
+    }
+
+    &__img {
+      width: 569px;
+      height: 593px;
+      align-self: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &__container {
+      width: 87.5vw;
+    }
+  }
+
+  .not-only {
+    width: 93.8vw;
+    row-gap: 105px;
+    height: unset;
+
+    &__container {
+      align-items: center;
+      gap: 42px;
+      height: unset;
+    }
+
+    &__title {
+      width: 200px;
+      text-align: center;
+      font-family: "Georgia";
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+    }
+
+    &__text {
+      width: 93.8vw;
+      text-align: center;
+    }
+
+    &__img {
+      width: 260px;
+      height: 271.77px;
+    }
   }
 }

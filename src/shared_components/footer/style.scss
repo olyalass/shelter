@@ -6,7 +6,7 @@
 
   &__container {
     @include space-between-flex();
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     align-items: center;
   }
@@ -93,5 +93,68 @@
     @include no-repeat-background();
     width: 22px;
     height: 32px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .footer {
+    padding-top: 30px;
+    background-size: 100% 100%;
+
+    &__container {
+      flex-direction: column;
+      max-width: 640px;
+      min-height: 609px;
+    }
+
+    &__wrap {
+      max-width: 640px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &__container {
+      height: 779px;
+    }
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+      height: 470px;
+      width: 300px;
+    }
+
+    &__title {
+      text-align: center;
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+
+      height: 64px;
+    }
+
+    &__block {
+      align-items: center;
+      height: 212px;
+
+      &:last-child {
+        height: 222px;
+
+        & .footer__contact:last-child {
+          align-self: flex-start;
+          padding: 0;
+        }
+      }
+    }
+
+    &__img {
+      width: 260px;
+      height: 269px;
+    }
   }
 }

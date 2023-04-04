@@ -7,7 +7,7 @@
   &__container {
     @include space-between-flex();
     flex-direction: column;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     height: 697px;
     align-items: center;
@@ -24,5 +24,28 @@
     margin: 0;
     text-align: center;
     letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .friends {
+    padding: 42px 0;
+
+    &__container {
+      height: 707px;
+    }
+
+    &__title {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 130%;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.06em;
+
+      width: 300px;
+    }
   }
 }

@@ -10,6 +10,7 @@ export class FriendsPages {
   lastButton;
   pageIndex;
   animalsArr;
+  frPage;
 
   constructor() {
     this.item = document.createElement("div");
@@ -21,11 +22,11 @@ export class FriendsPages {
     const frTitle = document.createElement("h3");
     frTitle.classList.add("friends-page__title");
     frTitle.innerHTML = "Our friends who<br>are looking for a house";
-    const frPage = document.createElement("div");
-    frPage.classList.add("friends-page__page");
+    this.frPage = document.createElement("div");
+    this.frPage.classList.add("friends-page__page");
     const frNav = document.createElement("div");
     frNav.classList.add("friends-page__nav");
-    frContainer.append(frTitle, frPage, frNav);
+    frContainer.append(frTitle, this.frPage, frNav);
 
     this.firstButton = this.createButton("<<");
     this.firstButton.setAttribute("disabled", true);
@@ -53,16 +54,69 @@ export class FriendsPages {
     const charly = this.createCard("Charly");
     const scarlett = this.createCard("Scarlett");
     const freddie = this.createCard("Freddie");
-    frPage.append(
-      katrine.container,
-      jennifer.container,
-      woody.container,
-      sophia.container,
-      timmy.container,
-      charly.container,
-      scarlett.container,
-      freddie.container
+
+    this.setLayoutToWidth(
+      katrine,
+      jennifer,
+      woody,
+      sophia,
+      timmy,
+      charly,
+      scarlett,
+      freddie
     );
+    window.addEventListener("resize", () => {
+      this.frPage.innerHTML = "";
+      this.setLayoutToWidth(
+        katrine,
+        jennifer,
+        woody,
+        sophia,
+        timmy,
+        charly,
+        scarlett,
+        freddie
+      );
+    });
+  }
+
+  setLayoutToWidth(
+    katrine,
+    jennifer,
+    woody,
+    sophia,
+    timmy,
+    charly,
+    scarlett,
+    freddie
+  ) {
+    const isMediumScreen = window.matchMedia("(max-width: 1250px)").matches;
+    const isSmallScreen = window.matchMedia("(max-width: 767px)").matches;
+    isSmallScreen
+      ? this.frPage.append(
+          katrine.container,
+          jennifer.container,
+          woody.container
+        )
+      : isMediumScreen
+      ? this.frPage.append(
+          katrine.container,
+          jennifer.container,
+          woody.container,
+          sophia.container,
+          timmy.container,
+          charly.container
+        )
+      : this.frPage.append(
+          katrine.container,
+          jennifer.container,
+          woody.container,
+          sophia.container,
+          timmy.container,
+          charly.container,
+          scarlett.container,
+          freddie.container
+        );
   }
 
   createButton(name) {

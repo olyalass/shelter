@@ -58,3 +58,83 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 1050px) {
+  .help {
+    &__mesh {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 630px;
+      column-gap: 60px;
+    }
+
+    &__item {
+      width: 170px;
+
+      &:nth-last-child(4) {
+        padding: 0;
+      }
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .help {
+    padding: 42px 0;
+
+    &__title {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: 0.06em;
+      margin-bottom: 42px;
+    }
+
+    &__mesh {
+      gap: 7.7vw;
+      width: 96.9vw;
+    }
+
+    &__item {
+      width: 115px;
+      height: 87px;
+      align-items: center;
+    }
+
+    &__img {
+      height: 50px;
+    }
+
+    &__name {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 110%;
+      text-align: center;
+      letter-spacing: 0.06em;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .help {
+    padding-top: 41px;
+
+    &__mesh {
+      grid-template-columns: repeat(2, 1fr);
+      width: 290px;
+      gap: 30px;
+    }
+
+    &__item {
+      width: 130px;
+    }
+  }
+}

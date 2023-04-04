@@ -65,3 +65,64 @@
     color: #292929;
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .friends-page {
+    padding-bottom: 76px;
+
+    &__container {
+      max-width: 580px;
+      height: 1577px;
+    }
+
+    &__page {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .friends-page {
+    padding: 42px 0;
+
+    &__container {
+      max-width: 300px;
+    }
+
+    &__page {
+      width: 270px;
+    }
+
+    &__title {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: 0.06em;
+    }
+
+    &__nav {
+      width: 93.8vw;
+      max-width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .friends-page {
+    &__card {
+      padding: 0;
+    }
+
+    &__page {
+      height: 1355px;
+    }
+
+    &__container {
+      height: 1565px;
+      gap: 42px;
+    }
+  }
+}
