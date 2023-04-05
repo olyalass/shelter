@@ -43,3 +43,95 @@
     letter-spacing: 1px;
   }
 }
+
+.popup {
+  position: relative;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 9px;
+  z-index: 2;
+
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    margin: 0 0 14px;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 110%;
+    text-align: justify;
+    letter-spacing: 0.06em;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0 0 1px;
+    width: 100%;
+    color: #f1cdb3;
+
+    & span {
+      color: black;
+      font-family: "Georgia";
+      font-style: normal;
+      font-size: 15px;
+      line-height: 110%;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  &__span {
+    font-weight: bold;
+  }
+
+  & button {
+    position: absolute;
+    top: -53px;
+    right: -37px;
+    padding: 26px;
+    background-color: unset;
+    background-image: url("../../../assets/icons/cross.svg");
+    @include no-repeat-background();
+    background-size: 12px 12px;
+  }
+}

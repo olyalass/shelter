@@ -48,7 +48,7 @@ export class Slider {
 
   createCard(petName) {
     const pet = this.animalsArr.filter((e) => e.name === petName)[0];
-    return new Card(pet.img, pet.name);
+    return new Card(pet);
   }
 
   setLayoutToWidth(katrine, jennifer, woody) {
