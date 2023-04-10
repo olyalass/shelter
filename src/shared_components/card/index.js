@@ -58,12 +58,10 @@ export class Card {
   }
 
   openPopup() {
-    console.log(1);
     this.darkBG = document.createElement("div");
     this.darkBG.classList.add("popup__bg");
     this.darkBG.addEventListener("click", () => this.closePopup());
     document.body.append(this.darkBG);
-    console.log(2);
     this.scroll = window.scrollY;
     this.createPopup();
     document.body.style.position = "fixed";
