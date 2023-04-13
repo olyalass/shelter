@@ -30,10 +30,17 @@ export class Card {
   createPopup() {
     this.popup = document.createElement("div");
     this.popup.classList.add("popup");
+    this.popup.addEventListener("click", (e) => e.stopPropagation());
+    const popupContainer = document.createElement("div");
+    popupContainer.classList.add("popup__container");
+    const img = document.createElement("img");
+    img.setAttribute("src", this.petObj.img);
+    img.classList.add("popup__img");
+    this.popup.append(img, popupContainer);
 
     const closeBttn = document.createElement("button");
     closeBttn.classList.add("button");
-    closeBttn.addEventListener("click", () => this.closePopup());
+    closeBttn.addEventListener("click", (e) => this.closePopup());
     const title = document.createElement("h2");
     title.classList.add("popup__title");
     title.textContent = this.petObj.name;
@@ -53,7 +60,7 @@ export class Card {
     const diseases = this.createListItem("Diseases", this.petObj.diseases);
     const parasites = this.createListItem("Parasites", this.petObj.parasites);
     list.append(age, inoculations, diseases, parasites);
-    this.popup.append(title, subtitle, text, list, closeBttn);
+    popupContainer.append(title, subtitle, text, list, closeBttn);
     this.darkBG.append(this.popup);
   }
 
@@ -70,7 +77,7 @@ export class Card {
     document.body.style.top = `-${this.scroll}px`;
   }
 
-  closePopup() {
+  closePopup(e) {
     this.darkBG.remove();
     document.body.style.position = "";
     document.body.style.overflow = "";

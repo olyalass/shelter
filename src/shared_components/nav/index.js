@@ -65,6 +65,15 @@ export class Nav {
           "nav__link_dark_active"
         )
       : linkItem.classList.add("nav__link_dark");
+    linkItem.addEventListener("click", (e) => {
+      if (this.burgerMenu) {
+        e.preventDefault();
+        this.closeBurger();
+        setTimeout(() => {
+          window.location.replace(link);
+        }, 1000);
+      }
+    });
     return linkItem;
   }
 

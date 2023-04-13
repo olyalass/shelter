@@ -46,15 +46,30 @@
 
 .popup {
   position: relative;
-  width: 270px;
+  width: 630px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background-color: #fafafa;
+  justify-content: center;
+
   padding: 10px;
   border-radius: 9px;
+
+  background-color: #fafafa;
   z-index: 2;
+
+  &__container {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-left: 11px;
+  }
+
+  &__img {
+    width: 350px;
+    height: 350px;
+    border-radius: 9px;
+  }
 
   &__bg {
     position: fixed;
@@ -133,5 +148,23 @@
     background-image: url("../../../assets/icons/cross.svg");
     @include no-repeat-background();
     background-size: 12px 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup {
+    width: 240px;
+
+    &__container {
+      width: 220px;
+    }
+
+    &__list {
+      padding-inline-start: 24px;
+    }
+
+    &__img {
+      display: none;
+    }
   }
 }
