@@ -19,7 +19,6 @@ export class FriendsPages {
   constructor() {
     this.item = document.createElement("div");
     this.item.classList.add("friends-page");
-    this.generateRandomArray();
 
     const frContainer = document.createElement("div");
     frContainer.classList.add("friends-page__container");
@@ -156,21 +155,14 @@ export class FriendsPages {
 
   restructureArr(perPage) {
     let arr = [];
-    if (perPage === 8) {
-      for (let i = 0; i < 8; i++) {
-        const chunk = [];
-        this.generatedArr.forEach((e) => chunk.push(e[i]));
-        arr.push(chunk);
-      }
-      arr.splice(-2);
-      this.dividedArr = arr;
-    } else if (perPage === 3) {
+    if (perPage !== 8) {
       this.generatedArr.forEach((e) => e.forEach((i) => arr.push(i)));
       this.dividedArr = [];
       for (let x = 0; x + perPage <= arr.length; x = x + perPage) {
         this.dividedArr.push(arr.slice(x, x + perPage));
       }
     } else this.dividedArr = this.generatedArr;
+    console.log("divided array for certain width");
     console.log(this.dividedArr);
   }
 
@@ -190,46 +182,18 @@ export class FriendsPages {
   }
 
   generateRandomArray() {
-    let arr = new Array(8);
-    for (let i = 0; i < 8; i++) {
-      arr[i] = new Array(6);
-    }
-    const nums = this.shuffleArray([0, 1, 2, 3, 4, 5, 6, 7]);
-    let i = 0,
-      j = 0;
-    for (let x = 0; x < 8; x++) {
-      let counter = 0;
-      j = j + x;
-      if (j > 5) {
-        i++;
-        j = j - 6;
-      }
-      while (i < 8) {
-        arr[i][j] = nums[x];
-        counter++;
-        if (i === 3 && j === 5) {
-          i = 4;
-          j = 0;
-          arr[i][j] = nums[x];
-          counter++;
-        }
-        if (counter === 3) {
-          i++;
-          j = j + 3;
-        } else {
-          i++;
-          j = j + 2;
-        }
-        if (j > 5) {
-          i++;
-          j = j - 6;
-        }
-      }
-      i = 0;
-      j = 0;
-    }
+    let nums = this.shuffleArray([0, 1, 2, 3, 4, 5, 6, 7]);
+    let arr = [];
+    for (let i = 0; i < 6; i++) {
+      const replacedEl = nums.shift();
+      nums.push(replacedEl);
+      const temp = Array.from(nums);
 
+      arr.push(temp);
+    }
     this.generatedArr = arr;
+    console.log("generated array for any width");
+    console.log(this.generatedArr);
   }
 
   shuffleArray(arr) {
