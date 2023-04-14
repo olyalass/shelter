@@ -18,20 +18,20 @@ export class Nav {
       linkAbout = this.createLink("About the shelter", "#", isLight, true);
       linkPets = this.createLink(
         "Our pets",
-        "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/pets.html",
+        "https://olyalass.github.io/shelter/build/pets.html",
         isLight
       );
       linkHelp = this.createLink("Help the shelter", "#help", isLight);
     } else {
       linkAbout = this.createLink(
         "About the shelter",
-        "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/index.html",
+        "https://olyalass.github.io/shelter/build/index.html",
         isLight
       );
       linkPets = this.createLink("Our pets", "#", isLight, true);
       linkHelp = this.createLink(
         "Help the shelter",
-        "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/index.html#help",
+        "https://olyalass.github.io/shelter/build/index.html#help",
         isLight
       );
     }

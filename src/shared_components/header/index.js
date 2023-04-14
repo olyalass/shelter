@@ -21,7 +21,7 @@ export class Header {
       ? logo.setAttribute("href", "#")
       : logo.setAttribute(
           "href",
-          "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/index.html"
+          "https://olyalass.github.io/shelter/build/index.html"
         );
     const logoTitle = document.createElement("h1");
     isLight

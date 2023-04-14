@@ -6,6 +6,6 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.join(__dirname, "../build"),
-    publicPath: "/olyalass-JSFE2023Q1/shelter/build/",
+    publicPath: "/shelter/build/",
   },
 };

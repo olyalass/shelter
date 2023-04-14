@@ -21,7 +21,7 @@ export class Friends {
     friendsButton.textContent = "Get to know the rest";
     friendsButton.setAttribute(
       "href",
-      "https://rolling-scopes-school.github.io/olyalass-JSFE2023Q1/shelter/build/pets.html"
+      "https://olyalass.github.io/shelter/build/pets.html"
     );
     container.append(friendsTitle, friendsContainer.item, friendsButton);
   }
